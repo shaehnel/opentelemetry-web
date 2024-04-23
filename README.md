@@ -5,14 +5,18 @@ use [@opentelemetry/sdk-trace-web](https://github.com/open-telemetry/opentelemet
 with different plugins and setup to instrument your JavaScript code running in the browser.
 
 ## Modification by Sebastian
-Addingls in OpenTelemetry logging
+Puprose of the repository: Add example with OpenTelemetry logging.
 
-Start collector and prometheus
+To start collector and prometheus, run:
 
 ```sh
 cd docker
 docker compose -f docker-compose.yaml up
 ```
+
+Find the collected telemetry data: 
+* Prometheus: http://localhost:9090/
+* Zipkin: http://localhost:9411/
 
 ## Installation
 
