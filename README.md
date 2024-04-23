@@ -5,9 +5,9 @@ use [@opentelemetry/sdk-trace-web](https://github.com/open-telemetry/opentelemet
 with different plugins and setup to instrument your JavaScript code running in the browser.
 
 ## Modification by Sebastian
-Puprose of the repository: Add example with OpenTelemetry logging.
+Purpose of the repository: Add example with OpenTelemetry logging.
 
-To start collector and prometheus, run:
+To start the Open Telemetry collector, Zipkin and Prometheus, run:
 
 ```sh
 cd docker
@@ -17,6 +17,12 @@ docker compose -f docker-compose.yaml up
 Find the collected telemetry data: 
 * Prometheus: http://localhost:9090/
 * Zipkin: http://localhost:9411/
+* Logs: in the system out of the `docker compose` command
+
+Modifications:
+* `package.json` to include the dependencies for Open Telemetry logging SDK and exporters
+* `docker/collector-config.yaml` to include the handling of incoming log events
+* `examples/logs/*` to show example code of creating a log statement and forward it to the Open Telemetry Collector
 
 ## Installation
 
